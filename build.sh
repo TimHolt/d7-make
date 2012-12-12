@@ -1,18 +1,44 @@
 # Build script for the platform
-# Assumes that we are building the platform in a folder named "platform"
 
-# Nuke the tmp dir if it exists
+# Set the variables
 
-if [ -d "tmp" ]; then
-    rm -rf tmp
+TEMP_DIR="tmp"
+TEMP_ARA_DIR="aratmp"
+PLATFORM_DIR="pltfrm"
+MAKE_FILE="d7-platform.make"
+
+# Nuke the tmp and pltmp dirs if they exists
+
+if [ -d "${TEMP_DIR}" ]; then
+    rm -rf ${TEMP_DIR}
+fi
+
+if [ -d "${TEMP_ARA_DIR}" ]; then
+    rm -rf ${TEMP_ARA_DIR}
 fi
 
 # Build the platform in tmp directory first
 
-drush make d7-platform.make tmp
+drush make ${MAKE_FILE} ${TEMP_DIR}
 
-# Backup the current platform just in case
-# Rsync what's in the tmp directory over into the platform directory
-# We must keep stuff like settings.php, etc.
+# Run ara.sh and remove old tmp dir
 
+ara.sh ${TEMP_DIR} ${TEMP_ARA_DIR}
 
+# Nuke the old vendor/drupal folder in ${PLATFORM_DIR}
+
+rm -rf ${PLATFORM_DIR}/vendor/drupal
+
+# Move new ${TEMP_ARA_DIR}/vendor/drupal into it's place
+
+mv ${TEMP_ARA_DIR}/vendor/drupal ${PLATFORM_DIR}/vendor/
+
+# Clean temp directories up
+
+rm -rf ${TEMP_DIR}
+rm -rf ${TEMP_ARA_DIR}
+rm -rf ara.log
+
+# Clear Drupal Site Caches
+
+drush cc all
