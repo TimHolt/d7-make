@@ -23,7 +23,7 @@ drush make ${MAKE_FILE} ${TEMP_DIR}
 
 # Run ara.sh and remove old tmp dir
 
-ara.sh ${TEMP_DIR} ${TEMP_ARA_DIR}
+./ara.sh ${TEMP_DIR} ${TEMP_ARA_DIR}
 
 # Nuke the old vendor/drupal folder in ${PLATFORM_DIR}
 
