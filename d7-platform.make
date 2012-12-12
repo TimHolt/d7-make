@@ -114,7 +114,7 @@ projects[profile2][subdir] = "contrib"
 projects[profile2][version] = "1.2"
 
 projects[registry_rebuild][subdir] = "contrib"
-projects[registry_rebuild][version] = "1.9"
+projects[registry_rebuild][version] = "1.8"
 
 projects[rules][subdir] = "contrib"
 projects[rules][version] = "2.2"
