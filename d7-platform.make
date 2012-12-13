@@ -59,6 +59,9 @@ projects[entityreference][version] = "1.0"
 projects[eva][subdir] = "contrib"
 projects[eva][version] = "1.2"
 
+projects[expire][subdir] = "contrib"
+projects[expire][version] = "1.0-alpha3"
+
 projects[features][subdir] = "contrib"
 projects[features][version] = "2.0-beta1"
 
@@ -112,6 +115,9 @@ projects[pathauto][version] = "1.2"
 
 projects[profile2][subdir] = "contrib"
 projects[profile2][version] = "1.2"
+
+projects[purge][subdir] = "contrib"
+projects[purge][version] = "1.5-rc1"
 
 projects[registry_rebuild][subdir] = "contrib"
 projects[registry_rebuild][version] = "1.8"
