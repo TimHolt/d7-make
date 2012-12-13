@@ -25,13 +25,15 @@ drush make ${MAKE_FILE} ${TEMP_DIR}
 
 ./ara.sh ${TEMP_DIR} ${TEMP_ARA_DIR}
 
-# Nuke the old vendor/drupal folder in ${PLATFORM_DIR}
+# Nuke the old folders in ${PLATFORM_DIR}
 
 rm -rf ${PLATFORM_DIR}/vendor/drupal
+rm -rf ${PLATFORM_DIR}/local/common/all
 
-# Move new ${TEMP_ARA_DIR}/vendor/drupal into it's place
+# Move new folders from ${TEMP_ARA_DIR} into place
 
 mv ${TEMP_ARA_DIR}/vendor/drupal ${PLATFORM_DIR}/vendor/
+mv ${TEMP_ARA_DIR}/local/common/all ${PLATFORM_DIR}/local/common/
 
 # Clean temp directories up
 
