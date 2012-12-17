@@ -17,6 +17,12 @@ projects[acquia_connector][version] = "2.8"
 projects[backup_migrate][subdir] = "contrib"
 projects[backup_migrate][version] = "2.4"
 
+projects[bean][subdir] = "contrib"
+projects[bean][version] = "1.0-rc6"
+
+projects[block_class][subdir] = "contrib"
+projects[block_class][version] = "1.2"
+
 projects[boxes][subdir] = "contrib"
 projects[boxes][version] = "1.0"
 
@@ -26,8 +32,14 @@ projects[calendar][version] = "3.4"
 projects[chosen][subdir] = "contrib"
 projects[chosen][version] = "1.0"
 
+projects[coder][subdir] = "contrib"
+projects[coder][version] = "1.2"
+
 projects[colorbox][subdir] = "contrib"
 projects[colorbox][version] = "2.0"
+
+projects[content_access][subdir] = "contrib"
+projects[content_access][version] = "1.2-beta1"
 
 projects[context][subdir] = "contrib"
 projects[context][version] = "3.0-beta5"
@@ -41,6 +53,9 @@ projects[ctools][version] = "1.2"
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
 
+projects[deploy][subdir] = "contrib"
+projects[deploy][version] = "2.x-dev"
+
 projects[devel][subdir] = "contrib"
 projects[devel][version] = "1.3"
 
@@ -52,6 +67,9 @@ projects[ds][version] = "2.0"
 
 projects[entity][subdir] = "contrib"
 projects[entity][version] = "1.0-rc3"
+
+projects[entity_dependency][subdir] = "contrib"
+projects[entity_dependency][version] = "1.0-alpha1"
 
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
@@ -67,6 +85,9 @@ projects[features][version] = "2.0-beta1"
 
 projects[feeds][subdir] = "contrib"
 projects[feeds][version] = "2.0-alpha7"
+
+projects[file_entity][subdir] = "contrib"
+projects[file_entity][version] = "2.0-unstable7"
 
 projects[field_group][subdir] = "contrib"
 projects[field_group][version] = "1.1"
@@ -98,6 +119,9 @@ projects[menu_attributes][version] = "1.0-rc2"
 projects[metatag][subdir] = "contrib"
 projects[metatag][version] = "1.0-beta4"
 
+projects[mobile_tools][subdir] = "contrib"
+projects[mobile_tools][version] = "2.0-unstable1"
+
 projects[module_filter][subdir] = "contrib"
 projects[module_filter][version] = "1.7"
 
@@ -122,14 +146,23 @@ projects[purge][version] = "1.5-rc1"
 projects[registry_rebuild][subdir] = "contrib"
 projects[registry_rebuild][version] = "1.8"
 
+projects[rpx][subdir] = "contrib"
+projects[rpx][version] = "2.2"
+
 projects[rules][subdir] = "contrib"
 projects[rules][version] = "2.2"
+
+projects[settings_audit_log][subdir] = "contrib"
+projects[settings_audit_log][version] = "1.2"
 
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 
 projects[token][subdir] = "contrib"
 projects[token][version] = "1.4"
+
+projects[token_filter][subdir] = "contrib"
+projects[token_filter][version] = "1.1"
 
 projects[transliteration][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
