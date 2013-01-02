@@ -47,6 +47,14 @@ cd ${PLATFORM_DIR}/local/common/all/themes
 ln -s ../../../../../local/themes/custom/focus focus
 cd ../../../../../
 
+# Put in symlink to local blockcache_alter
+
+cd ${PLATFORM_DIR}/local/common/all/modules
+rm -rf blockcache_alter
+ln -s ../../../../../local/modules/custom/blockcache_alter blockcache_alter
+cd ../../../../../
+
+
 # Clear Drupal Site Caches
 
 cd pltfrm/docroot
