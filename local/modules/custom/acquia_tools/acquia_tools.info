@@ -1,0 +1,8 @@
+name = Acquia Tools
+description = "Provides tools to interact with Acquia's managed cloud."
+package = Acquia Network Connector
+core = 7.x
+configure = admin/config/system/acquia_tools
+files[] = acquia_tools.module
+files[] = acquia_tools.install
+php = 5.2

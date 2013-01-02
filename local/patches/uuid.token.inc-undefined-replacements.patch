@@ -1,0 +1,17 @@
+--- uuid.tokens.inc	2012-01-31 07:00:23.000000000 -0600
++++ uuid.tokens.inc	2012-12-17 16:25:05.000000000 -0600
+@@ -45,6 +45,7 @@
+  * Implements hook_tokens().
+  */
+ function uuid_tokens($type, $tokens, array $data = array(), array $options = array()) {
++  $replacements = array();
+   switch ($type) {
+     case 'node':
+       $node = $data['node'];
+@@ -93,4 +94,4 @@
+   }
+
+   return $replacements;
+-}
+\ No newline at end of file
++}

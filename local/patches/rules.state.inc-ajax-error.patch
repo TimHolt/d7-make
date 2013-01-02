@@ -1,0 +1,13 @@
+--- includes/rules.state.inc	2012-08-03 02:48:35.000000000 -0500
++++ includes/rules.state.inc	2012-12-17 14:53:20.000000000 -0600
+@@ -617,7 +617,9 @@
+    */
+   public static function addSiteMetadata(EntityMetadataWrapper $wrapper, $property_info) {
+     $site_info = entity_get_property_info('site');
+-    $property_info['properties'] += $site_info['properties'];
++    if (isset($site_info['properties'])) {
++      $property_info['properties'] += $site_info['properties'];
++    }
+     // Also invoke the usual callback for altering metadata, in case actions
+     // have specified further metadata.
+     return RulesData::applyMetadataAssertions($wrapper, $property_info);
