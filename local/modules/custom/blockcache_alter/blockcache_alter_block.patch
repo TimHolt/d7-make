@@ -64,7 +64,6 @@
 -  if (variable_get('block_cache', FALSE) && !in_array($block->cache, array(DRUPAL_NO_CACHE, DRUPAL_CACHE_CUSTOM)) && $user->uid != 1) {
 +  // BCA Patch - can override User 1 to allow it to see cached blocks
 +  $user1_override = variable_get('bca_user1', FALSE);
-+  // if (variable_get('block_cache', FALSE) && !in_array($block->cache, array(DRUPAL_NO_CACHE, DRUPAL_CACHE_CUSTOM)) && $user->uid != 1) {
 +  if (variable_get('block_cache', FALSE) && !in_array($block->cache, array(DRUPAL_NO_CACHE, DRUPAL_CACHE_CUSTOM)) && ($user->uid != 1 || $user1_override)) {
      // Start with common sub-patterns: block identification, theme, language.
      $cid_parts[] = $block->module;
