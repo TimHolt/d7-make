@@ -56,6 +56,11 @@ function blockcache_alter_admin_settings() {
   return system_settings_form($form);
 }
 
+function blockcache_alter_init() {
+  // Add some funky hide and show javascript.
+  drupal_add_js(drupal_get_path('module', 'blockcache_alter') . '/blockcache_alter.js');
+}
+
 /**
  * Implementation of hook_form_alter().
  */
@@ -63,9 +68,6 @@ function blockcache_alter_form_alter(&$form, $form_state, $form_id) {
 
   // Add caching fieldset to the block configure page.
   if ($form_id == 'block_admin_configure') {
-
-    // Add some funky hide and show javascript.
-    drupal_add_js(drupal_get_path('module', 'blockcache_alter') . '/blockcache_alter.js');
 
     // Core patch applied or not.
     $core_patch = variable_get('bca_corepatch', 0);
@@ -110,6 +112,7 @@ function blockcache_alter_form_alter(&$form, $form_state, $form_id) {
       '#description' => t('Select the appropriate cache setting for this block.'),
       '#options' => $block_cache_options,
       '#default_value' => $default_value,
+      '#attributes' => array('onChange' => 'javascript:BlockCacheAlterCheck(); return false;'),
     );
 
     // Cache clearing option after saving this block.

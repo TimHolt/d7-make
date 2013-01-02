@@ -4,7 +4,7 @@
  * we need to hide or show the additional settings.
  */
 function BlockCacheAlterCheck() {
-  var blockcache = $('#edit-cache-block');
+  var blockcache = jQuery('#edit-cache-block');
   var selected = blockcache[0].options[blockcache[0].selectedIndex].value;
   if (selected == '-1') {
     toggleBlockCacheAlter('hide');
@@ -19,9 +19,9 @@ function BlockCacheAlterCheck() {
  */
 function toggleBlockCacheAlter(type) {
   if (type == 'hide') {
-    $('#blockcache_alter_wrapper').hide('slow');
+    jQuery('#blockcache_alter_wrapper').hide('slow');
   }
   else {
-    $('#blockcache_alter_wrapper').show('slow');
+    jQuery('#blockcache_alter_wrapper').show('slow');
   }
 }
