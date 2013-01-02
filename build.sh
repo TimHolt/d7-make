@@ -41,6 +41,15 @@ rm -rf ${TEMP_DIR}
 rm -rf ${TEMP_ARA_DIR}
 rm -rf ara.log
 
+# Put in symlink to development theme
+
+cd ${PLATFORM_DIR}/local/common/all/themes
+ln -s ../../../../../local/themes/custom/focus focus
+cd ../../../../../
+
 # Clear Drupal Site Caches
 
-drush cc all
+cd pltfrm/docroot
+drush -l make2.localhost cc all
+drush -l deploy-test.localhost cc all
+cd ../../
