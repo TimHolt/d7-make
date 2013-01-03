@@ -26,8 +26,11 @@ projects[backup_migrate][version] = "2.4"
 projects[bean][subdir] = "contrib"
 projects[bean][version] = "1.0-rc6"
 
-projects[blockcache_alter][subdir] = "contrib"
-projects[blockcache_alter][version] = "1.x-dev"
+projects[blockcache_alter][type] = "module"
+projects[blockcache_alter][subdir] = "custom"
+projects[blockcache_alter][download][type] = "git"
+projects[blockcache_alter][download][url] = "git@github.com:TimHolt/blockcache_alter.git"
+projects[blockcache_alter][download][branch] = "master"
 
 projects[block_class][subdir] = "contrib"
 projects[block_class][version] = "1.2"

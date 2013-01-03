@@ -21,6 +21,12 @@ fi
 
 drush make ${MAKE_FILE} ${TEMP_DIR}
 
+# Patch drupal core
+
+cd ${TEMP_DIR}
+patch modules/block/block.module < ../local/modules/custom/blockcache_alter/blockcache_alter_block.patch
+cd ../
+
 # Run ara.sh and remove old tmp dir
 
 ./ara.sh ${TEMP_DIR} ${TEMP_ARA_DIR}
@@ -49,10 +55,10 @@ cd ../../../../../
 
 # Put in symlink to local blockcache_alter
 
-cd ${PLATFORM_DIR}/local/common/all/modules
-rm -rf blockcache_alter
-ln -s ../../../../../local/modules/custom/blockcache_alter blockcache_alter
-cd ../../../../../
+#cd ${PLATFORM_DIR}/local/common/all/modules/custom
+#rm -rf blockcache_alter
+#ln -s ../../../../../local/modules/custom/blockcache_alter blockcache_alter
+#cd ../../../../../
 
 
 # Clear Drupal Site Caches

@@ -1,5 +1,5 @@
---- modules/block/block.module	2012-12-19 12:52:59.000000000 -0600
-+++ modules/block/block.module	2013-01-02 08:56:40.000000000 -0600
+--- block.module	2013-01-02 20:21:59.000000000 -0600
++++ block.module	2013-01-02 20:27:56.000000000 -0600
 @@ -839,16 +839,29 @@
    // Block caching is not compatible with node access modules. We also
    // preserve the submission of forms in blocks, by fetching from cache only
@@ -57,7 +57,7 @@
          }
        }
 
-@@ -910,7 +938,10 @@
+@@ -910,7 +938,9 @@
    // it brings too many chances of having unwanted output get in the cache
    // and later be served to other users. We therefore exclude user 1 from
    // block caching.
